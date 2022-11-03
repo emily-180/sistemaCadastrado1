@@ -235,10 +235,10 @@
             this.bntAddGenero.ForeColor = System.Drawing.Color.DimGray;
             this.bntAddGenero.Image = global::SistemaCadastro.Properties.Resources.add;
             this.bntAddGenero.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.bntAddGenero.Location = new System.Drawing.Point(719, 61);
+            this.bntAddGenero.Location = new System.Drawing.Point(721, 63);
             this.bntAddGenero.Margin = new System.Windows.Forms.Padding(4);
             this.bntAddGenero.Name = "bntAddGenero";
-            this.bntAddGenero.Size = new System.Drawing.Size(30, 22);
+            this.bntAddGenero.Size = new System.Drawing.Size(34, 37);
             this.bntAddGenero.TabIndex = 15;
             this.bntAddGenero.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.bntAddGenero.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
