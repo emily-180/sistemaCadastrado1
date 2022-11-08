@@ -61,7 +61,20 @@ namespace SistemaCadastro
 
         private void BtnConfirmaCadastro_Click_1(object sender, EventArgs e)
         {
-           
+            Banda b = new Banda();
+            b.Nome = txtnome.Text;
+            b.Genero = Convert.ToInt32(cbGenero.SelectedValue.ToString());
+            b.Integrantes = Convert.ToInt32(txtintegrantes.Text);
+            b.Ranking = Convert.ToInt32(txtranking.Text);
+            //enviar a ficha para o banco
+            ConectaBanco conecta = new ConectaBanco();
+            bool retorno = conecta.insereBanda(b);
+            if (retorno == true)
+            {
+                MessageBox.Show("Dados inseridos com sucesso!");
+            }
+            else
+                lblmsgerro.Text = conecta.mensagem;
         }
 
         private void txtBusca_TextChanged(object sender, EventArgs e)
