@@ -226,6 +226,7 @@
             this.tabCadastrar.Size = new System.Drawing.Size(776, 291);
             this.tabCadastrar.TabIndex = 0;
             this.tabCadastrar.Text = "Cadastrar";
+            this.tabCadastrar.Click += new System.EventHandler(this.tabCadastrar_Click);
             // 
             // bntAddGenero
             // 
