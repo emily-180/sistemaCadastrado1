@@ -11,12 +11,12 @@
 using System;
 using System.Reflection;
 
-[assembly: System.Reflection.AssemblyCompanyAttribute("SistemaCadastro")]
+[assembly: System.Reflection.AssemblyCompanyAttribute("SistemaClinicaEstetica")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Release")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
 [assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
-[assembly: System.Reflection.AssemblyProductAttribute("SistemaCadastro")]
-[assembly: System.Reflection.AssemblyTitleAttribute("SistemaCadastro")]
+[assembly: System.Reflection.AssemblyProductAttribute("SistemaClinicaEstetica")]
+[assembly: System.Reflection.AssemblyTitleAttribute("SistemaClinicaEstetica")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
 [assembly: System.Runtime.Versioning.TargetPlatformAttribute("Windows7.0")]
 [assembly: System.Runtime.Versioning.SupportedOSPlatformAttribute("Windows7.0")]

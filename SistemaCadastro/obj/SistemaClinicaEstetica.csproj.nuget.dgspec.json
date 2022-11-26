@@ -1,15 +1,15 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\emily\\Source\\Repos\\sistemaCadastrado1\\SistemaCadastro\\SistemaCadastro.csproj": {}
+    "C:\\Users\\emily\\Source\\Repos\\sistemaCadastrado1\\SistemaCadastro\\SistemaClinicaEstetica.csproj": {}
   },
   "projects": {
-    "C:\\Users\\emily\\Source\\Repos\\sistemaCadastrado1\\SistemaCadastro\\SistemaCadastro.csproj": {
+    "C:\\Users\\emily\\Source\\Repos\\sistemaCadastrado1\\SistemaCadastro\\SistemaClinicaEstetica.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\emily\\Source\\Repos\\sistemaCadastrado1\\SistemaCadastro\\SistemaCadastro.csproj",
-        "projectName": "SistemaCadastro",
-        "projectPath": "C:\\Users\\emily\\Source\\Repos\\sistemaCadastrado1\\SistemaCadastro\\SistemaCadastro.csproj",
+        "projectUniqueName": "C:\\Users\\emily\\Source\\Repos\\sistemaCadastrado1\\SistemaCadastro\\SistemaClinicaEstetica.csproj",
+        "projectName": "SistemaClinicaEstetica",
+        "projectPath": "C:\\Users\\emily\\Source\\Repos\\sistemaCadastrado1\\SistemaCadastro\\SistemaClinicaEstetica.csproj",
         "packagesPath": "C:\\Users\\emily\\.nuget\\packages\\",
         "outputPath": "C:\\Users\\emily\\Source\\Repos\\sistemaCadastrado1\\SistemaCadastro\\obj\\",
         "projectStyle": "PackageReference",

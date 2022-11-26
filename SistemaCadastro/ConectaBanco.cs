@@ -7,16 +7,16 @@ using MySql.Data;
 using MySql.Data.MySqlClient;
 using System.Data;
 
-namespace SistemaCadastro
+namespace SistemaClinicaEstetica
 {
     internal class ConectaBanco
     {
-        MySqlConnection conexao = new MySqlConnection("server=localhost;user id=root;password=;database=banco_cadastro");
+        MySqlConnection conexao = new MySqlConnection("server=localhost;user id=root;password=;database=clinicaestetica");
         public String mensagem;
 
-        public DataTable listaGeneros() //dataTable tabela virtual, recebe os dados do banco e coloca nela
+        public DataTable listaProcedimentos() // listaGeneros dataTable tabela virtual, recebe os dados do banco e coloca nela
         {
-            MySqlCommand cmd = new MySqlCommand("lista_generos", conexao);
+            MySqlCommand cmd = new MySqlCommand("lista_procedimentos", conexao);
             cmd.CommandType = CommandType.StoredProcedure;
             try
             {
@@ -36,11 +36,11 @@ namespace SistemaCadastro
                 conexao.Close();
             }
 
-        }// fim lista_generos
+        }// fim lista_procedimentos
 
-        public DataTable listaBandas() //dataTable tabela virtual, recebe os dados do banco e coloca nela
+        public DataTable listaConsultas() //dataTable tabela virtual, recebe os dados do banco e coloca nela
         {
-            MySqlCommand cmd = new MySqlCommand("listar_bandas", conexao);
+            MySqlCommand cmd = new MySqlCommand("lista_consultas", conexao);
             cmd.CommandType = CommandType.StoredProcedure;
             try
             {
@@ -62,14 +62,16 @@ namespace SistemaCadastro
 
         }// fim lista_bandas
 
-        public bool insereBanda(Banda b)
+        public bool insereConsulta(Consulta c)
         {
-            MySqlCommand cmd = new MySqlCommand("proc_insereBanda", conexao);
+            MySqlCommand cmd = new MySqlCommand("proc_insereConsulta", conexao);
             cmd.CommandType = CommandType.StoredProcedure;
-            cmd.Parameters.AddWithValue("nome", b.Nome);
-            cmd.Parameters.AddWithValue("genero", b.Genero);
-            cmd.Parameters.AddWithValue("integrantes", b.Integrantes);
-            cmd.Parameters.AddWithValue("ranking", b.Ranking);
+            cmd.Parameters.AddWithValue("cliente", c.Cliente);
+            cmd.Parameters.AddWithValue("cpf", c.Cpf);
+            cmd.Parameters.AddWithValue("telefone", c.Telefone);
+            cmd.Parameters.AddWithValue("hora", c.Hora);
+            cmd.Parameters.AddWithValue("dataD", c.DataD);
+            cmd.Parameters.AddWithValue("proce", c.Proce);
             try
             {
                 conexao.Open();
@@ -85,13 +87,13 @@ namespace SistemaCadastro
             {
                 conexao.Close();
             }
-        }// fim insereBanda
+        }// fim insereConsulta
 
-        public bool deletaBanda(int idbanda)
+        public bool deletaConsulta(int idconsulta)
         {
-            MySqlCommand cmd = new MySqlCommand("proc_removeBanda", conexao);
+            MySqlCommand cmd = new MySqlCommand("proc_apagarConsulta", conexao);
             cmd.CommandType = CommandType.StoredProcedure;
-            cmd.Parameters.AddWithValue("idbanda", idbanda);
+            cmd.Parameters.AddWithValue("codConsulta", idconsulta);
             try
             {
                 conexao.Open();
@@ -107,17 +109,19 @@ namespace SistemaCadastro
             {
                 conexao.Close();
             }
-        }// fim deletaBanda
+        }// fim deletaConsulta
 
-        public bool alteraBanda(Banda b, int idbanda)
+        public bool alteraConsulta(Consulta c, int idconsulta)
         {
-            MySqlCommand cmd = new MySqlCommand("proc_alterarBanda", conexao);
+            MySqlCommand cmd = new MySqlCommand("proc_alterarConsulta", conexao);
             cmd.CommandType = CommandType.StoredProcedure;
-            cmd.Parameters.AddWithValue("idbanda", idbanda);
-            cmd.Parameters.AddWithValue("nome", b.Nome);
-            cmd.Parameters.AddWithValue("genero", b.Genero);
-            cmd.Parameters.AddWithValue("integrantes", b.Integrantes);
-            cmd.Parameters.AddWithValue("ranking", b.Ranking);
+            cmd.Parameters.AddWithValue("codConsulta", idconsulta);
+            cmd.Parameters.AddWithValue("cliente", c.Cliente);
+            cmd.Parameters.AddWithValue("cpf", c.Cpf);
+            cmd.Parameters.AddWithValue("telefone", c.Telefone);
+            cmd.Parameters.AddWithValue("hora", c.Hora);
+            cmd.Parameters.AddWithValue("dataD", c.DataD);
+            cmd.Parameters.AddWithValue("proce", c.Proce);
             try
             {
                 conexao.Open();
@@ -133,7 +137,7 @@ namespace SistemaCadastro
             {
                 conexao.Close();
             }
-        }// fim update_banda
+        }// fim update_consulta
 
 
         //—--------------------------

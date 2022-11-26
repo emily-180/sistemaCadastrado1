@@ -12,5 +12,5 @@ build_property.ProjectTypeGuids =
 build_property.InvariantGlobalization = 
 build_property.PlatformNeutralAssembly = 
 build_property._SupportedPlatformList = Linux,macOS,Windows
-build_property.RootNamespace = SistemaCadastro
+build_property.RootNamespace = SistemaClinicaEstetica
 build_property.ProjectDir = C:\Users\emily\Source\Repos\sistemaCadastrado1\SistemaCadastro\
